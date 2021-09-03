@@ -33,7 +33,7 @@ EncabezadoEncuesta.hasMany(CampoEncuesta);
 RespuestaCampo.belongsTo(CampoEncuesta);
 CampoEncuesta.hasMany(RespuestaCampo);
 
-db.sequelize.sync().then(async () => {
+db.sequelize.sync({force:true}).then(async () => {
     console.log("BASE DE DATOS CONECTADA");
 });
 
